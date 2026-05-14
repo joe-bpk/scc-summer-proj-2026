@@ -1,0 +1,7 @@
+build/
+libraries/
+.cache/
+**/__pycache__/
+*.pyc
+MICROBIT.hex
+MICROBIT.bin
