@@ -1,0 +1,214 @@
+#+title: Assignment Brief
+
+Part-I Summer Project
+Deadline:	17:00 Friday (8th of May) End of Week 23
+Assessment Mode:	IN LAB DEMO IN YOUR WEEK 24 LAB SESSION
+ 	MOODLE SUBMISSION
+ 	REPOSITORY LINK SUBMISSION
+* Aims
+In this final term of your first year, there is a single task: a single cross-module project that is designed to bring together all you have learned since you joined us in October. This project represents the final piece of practical coursework for your first year and constitutes 33% of the coursework assessment for the year. Time to show us what you can do!
+
+You have a choice of projects to undertake from the choices below. You need to pick just one of these projects. Read each of them carefully before choosing which project to undertake. Please note that the projects state which programming language you must use for that project. These projects have been designed to build on what you have learned in SCC.111, SCC.121 and SCC.131 (where applicable). Note that some projects are unavailable / have different requirements for students not studying SCC.131 (such as those studying for Computer Science and Mathematics or Management and IT degrees).
+
+Getting Support
+You should attend your timetabled SCC1x1 lab session in weeks 21-23 inclusive for support, where staff and teaching assistants will be present to provide guidance, feedback and to answer your questions. Please note that your week 24 session will be reserved for you to demonstrate the functionality of your work. Staff will not be able to provide support during the Week 24 lab session.
+
+The FAST hub will also be available daily if you need additional drop-in support. See Moodle for more details.
+
+* Submission and Assessment
+This work will be assessed by a member of academic staff after you follow the instructions below to submit your work. This assessment will be further informed by a practical demonstration of your work. You will be asked to present your work in your Week 24 lab session. Be prepared to take the lead in demonstrating your project, and to answer questions about it.
+
+You MUST submit your code to Moodle by the advertised deadline in a .zip file.
+
+You MUST demonstrate your work by downloading your Moodle submission and running it IN YOUR OWN WEEK 24 TIMETABLED LAB SESSION.
+
+You MUST ensure that your project can be compiled and executed FROM THE COMMAND LINE ON A LAB PC, without using an IDE. (If the project you selected has further instructions on how to compile and run your project, you must follow them.)
+
+The standard University regulation on permitting late submission of coursework DOES NOT APPLY TO THIS COURSEWORK ASSIGNMENT.
+
+FAILURE TO ADHERE TO THE ABOVE WILL RESULT IN A FAIL MARK (F4) BEING RECORDED.
+
+* Version Control Submission
+You are expected to use git version control for your project, and this is reflected in the marking scheme. To submit your private Github repository for assessment, you must do the following:
+
+Regardless of the project you select, invite the ‘scc111-2026’ github user as a collaborator, as shown in the lectures slides.
+Submit the FULL URL of your project repository (the same link that you’d need to ‘clone’ it) using the form linked at the top of this page.
+Marking Scheme
+Your work will be marked based on the following categories. Your final grade will be determined based on a weighted mean of these grades according to the weighting shown in the table below.
+
+* Marking Scheme
+Project Functionality
+
+See individual project descriptions below for indicative levels of the functionality required.
+70%
+Code Structure and Elegance
+
+Modularity of code
+Use of appropriate data types and libraries
+Use of appropriate language constructs (arrays, loops, functions, methods, classes)
+10%
+Code Style
+
+Appropriate comments, code indentation
+Appropriate name/ scope of variables and functions/methods
+10%
+Use of Git version control
+
+Clean and regular commits
+Appropriate commit messages
+10%
+In all cases a grade descriptor (A, B, C, D, F) will be used to mark your work in each category. The following sections provide an indication of the level of functionality expected.
+
+Students may also award of a distinction (+) category overall if they feel a piece of work exhibits clearly outstanding practice. If you feel your work warrants a distinction for going significantly above and beyond the specification, it is your responsibility to state and demonstrate this during your Week 24 lab session.
+
+* Plagarism and AI
+
+Plagiarism
+This project should be entirely your own work. In this context, that means that it is reasonable to discuss ideas with others, but you should not expect to study the code of another student, or to let them study yours. Code examples taken from the lecture notes are acceptable, as well as, small sections of code (a few lines, for example) from the internet - but if it is in your code, you should be able to understand and confidently explain what it does and how it works. The use of AI tools to write code on your behalf is regarded as equivalent to copying code from any external source.
+
+Use of AI Statement
+Lancaster University has adopted a Red-Amber-Green (RAG) categorisation system to guide students on their use of Generative AI (Gen AI) tools in summative assessment. This coursework is in the RED Category; AI tools cannot be used. Students suspected of using AI tools in assessment identified as category red, will be investigated in line with institutional academic integrity procedures. For further information, please refer to the AI Policy. If you are unsure about the use of AI tools in your assessment, please consult your lab academic.
+
+RED Category; AI tools cannot be used
+
+
+* Project 3: Personalised Jump Counter (C/C++, ARM Assembly, Java)
+** Project Overview
+Smartphones and smartwatches have become a widely used platform for monitoring a user’s physical activity. They typically rely on built‑in accelerometer sensors to capture motion data. Using this information, they run algorithms that infer the user’s direction, motion patterns, and overall activity level from raw acceleration readings.
+
+This project focuses on designing and implementing a personalised jump‑tracking and counting algorithm using a low‑cost embedded system such as the BBC micro:bit.
+
+The objectives of the project are:
+
+To acquire accelerometer readings from the micro:bit and analyse jump‑related motion patterns that will guide the design of a personalised jump‑tracking algorithm.
+
+To develop code in C/C++ and ARM Assembly for the micro:bit that accurately converts accelerometer data into a jump count, displays the count on the 5×5 LED display, and records all activity in a log file.
+
+To develop code in C/C++ or Java that runs on a lab computer, processes activity data from a properly-formatted version of the log file, and displays key metrics on a lab monitor, such as peak‑exertion intervals and the highest number of consecutive jumps.
+
+To boost your fitness through rigorous testing of your software product! Alas, your improved fitness will not be assessed.
+
+** Phase 1: Research and Design
+Accelerometers are sensors that measure the rate of change of an object’s velocity over time along all three spatial dimensions (X, Y and Z). Acceleration is measured in meters per squared meter (m/s2) or in g, where one g (or, equivalently, 1000 milli-g) represents the Earth’s standard gravitational force (g-force) that acts on a unit of mass. For example, zero gravity or 0g is experienced in free fall; astronauts typically experience 3g to 4g during a rocket launch; pilots of fighter jets endure up to 9g during combat maneuvers.
+
+Accelerometers are used in machinery to monitor vibrations, in buildings and infrastructure to detect earthquakes, in navigation systems to determine orientation and support stabilisation, and in smart personal devices to track movement and physical activity.
+
+The CODAL C runtime environment offers an accelerometer class, which can access the accelerometer on board the micro:bit. Acceleration in each dimension is measured in milli-g. Event‑driven programming can be used to create a simple script in C that raises an event each time the accelerometer generates new data, and triggers an event handler to log those measurements in a file.
+
+Accessing and Interpreting Readings of the Accelerometer
+To illustrate how the accelerometer class can be used in practice, let us walk through an example. Recall that the file main.cpp is located in the subfolder source of the microbit folder on your h-drive. Imagine that main.cpp creates a MicroBit object, called uBit, and sets up a listener in the main() function to monitor the accelerometer:
+
+ uBit.messageBus.listen(MICROBIT_ID_ACCELEROMETER,
+ MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE, onAccelerometerData);
+The event handler onAccelerometerData() collects accelerometer readings in all three dimensions using the methods uBit.accelerometer.getX(), uBit.accelerometer.getY() and uBit.accelerometer.getZ(), and saves them in the default log file MY_DATA.HTM. The source file main.cpp is compiled and the executable file MICROBIT.hex is transferred to a micro:bit device, which is held by a user as shown in Fig. 3.1, i.e., the circuit board is positioned vertically - relative to the floor - with its long edge facing the floor and the 5×5 LED display facing the body of the user.
+
+Fig. 3.1: Adjusting micro:bit’s orientation to maximise changes in acceleration along the Y‑axis.
+Fig. 3.1: Adjusting micro:bit’s orientation to maximise changes in acceleration along the Y‑axis.
+To test the sensor, the user jumps six times while holding the micro:bit as depicted in Fig. 3.1. More specifically, the user rests briefly between each of the first three jumps, then performs the next three jumps without resting. The accelerometer readings, which have been saved in the data file MY_DATA.HTM, can be displayed in a web browser and visualised as a function of time after clicking the “Visual Preview” button on the web page, as shown in Fig. 3.2.
+
+Fig. 3.2: Visual preview of accelerometer data along the X, Y, and Z axes, sampled every 0.02 seconds.
+Fig. 3.2: Visual preview of accelerometer data along the X, Y, and Z axes, sampled every 0.02 seconds.
+The X and Y axes record minor wobbling motions that occur during the jump; these readings are not essential for the analysis and can be ignored. If the “Download” button on the web page is pressed (see Fig. 3.2), the accelerometer data will be exported to a Comma-Separated Values (CSV) file, which can be subsequently loaded into a spreadsheet application, such as Microsoft Excel, LibreOffice Calc or Apple Numbers, for further analysis.
+
+As can be seen in Fig. 3.2, the measurements along the Y axis taken before the first jump provide a baseline from which the sensor’s acceleration can be determined when the micro:bit is stationary. If this baseline value, which represents the mean (average), is subtracted from all Y-axis measurements (in Excel, Calc or Numbers), the plot will be centred around zero, as illustrated in Fig. 3.3. The data transformation technique of subtracting the mean of a variable from all measurements is called mean centering.
+
+Fig. 3.3: Mean centering of the Y-axis measurements presented in Fig. 3.2. The value of the subtracted mean in this example is 1025 milli-g. Analysis of this plot can reveal movement patterns associated with each jump.
+Fig. 3.3: Mean centering of the Y-axis measurements presented in Fig. 3.2. The value of the subtracted mean in this example is 1025 milli-g. Analysis of this plot can reveal movement patterns associated with each jump.
+The plot in Fig. 3.3 captures the user’s individual ‘jump profile’, which can vary from person to person. Peaks and troughs in the curve, i.e., local maxima and local minima, separated by zero crossings represent trends and trend reversals in movement, which synthesise each jump. Observe that different jump types in Fig. 3.3, e.g., jumps with rest intervals in between or continuous jumps, generate different ‘signatures’ in the accelerometer readings.
+
+📣 Key takeaway: Careful examination of a person’s jump profile will identify characteristic patterns for each jump type, which will guide the design of an algorithm in C/C++ that will enable the micro:bit to estimate the number of jumps in real time from accelerometer data.
+
+Obtain and Analyse your own Jump Profile
+Your task for Phase 1 of this project is to develop C code for the micro:bit that stores accelerometer readings into a log file. You should then collect accelerometer measurements while you perform different types of jumps, analyse the recorded data in a spreadsheet application to identify motion patterns, and understand the characteristics of your jump profile.
+
+The task can be divided into three steps:
+
+1️⃣ Implement event listeners and event handlers in main.cpp for Button A, Button B, and the accelerometer on board the micro:bit. Each click of Button A should toggle the recording state between enabled (1) and disabled (0). A click of Button B should clear the contents of the log file. New accelerometer readings should be logged if recording is enabled.
+
+2️⃣ Compile the C source file and transfer MICROBIT.hex to your micro:bit. Design a short routine featuring at least two types of jumps. Press Button A to enable recording, stand still for a couple of seconds and then perform the routine while holding the micro:bit as in Fig. 3.1. After completing the routine, press Button A to stop recording. If you want to repeat the routine and reset the log file, press Button B.
+
+3️⃣ Disconnect your micro:bit from the USB port, then reconnect it. The updated data file MY_DATA.HTM should appear in the MICROBIT drive. Open it in a web browser to check whether acceleration and changes in acceleration over time along the Y‑axis of the accelerometer are greater than those on the X and Y axes, as in Fig. 3.2. Press “Download” to export the file in CSV format, open it in Excel, Calc or Numbers, and analyse each jump type, as in Fig. 3.3.
+
+💡Links to relevant SCC.131 material:
+
+Event listeners and handlers for buttons A and B: Lecture notes on Sensors and Logging | API
+
+Event listeners and handlers for the accelerometer: API
+
+Logging with micro:bit: Lecture notes on Sensors and Logging | DOCS v2 by c272
+
+Online download tool for HEX files if dragging and dropping MICROBIT.hex on to the MICROBIT drive does not work: micro:bit hex download tool
+
+⚠️ You should not use the built-in GESTURE events and GESTURE methods of the accelerometer class. Focus on the processing of raw accelerometer data using the getX(), getY() and getZ() methods.
+
+** Phase 2: Development and Testing
+Phase 2 of the project proceeds on the assumption that you have a clear understanding of what qualifies as a jump of a particular type in the accelerometer data, which was the objective of Step 3 of Phase 1.
+
+For Phase 2, you are expected to develop code for the micro:bit that collects accelerometer readings as before, but rather than writing them to a data file, your program should process the data in real time and display on the 5×5 LED screen an up arrow or down arrow when upward or downward movement is detected.
+
+Using Fig. 3.3 as a reference, upward movement is defined as the transition from negative mean-centred values to positive mean-centred values. This event is referred to as a zero up-crossing. On the other hand, downward movement implies a zero down-crossing, i.e., a transition from positive mean-centred values to negative mean-centred values.
+
+The task can be divided into two steps:
+
+1️⃣ Use knowledge gained from SCC.111-Software Development to write a program in standard C/C++ (i.e., include standard libraries instead of MicroBit.h) that runs on a lab computer and reads the CSV file produced in Step 2 of Phase 1. Create a function that treats every line of the file as a new accelerometer reading, isolates the Y-axis measurement, subtracts the mean from the measurement, compares the result with previously stored mean-centred measurements, and determines if a zero up-crossing or a zero down-crossing has occurred. Depending on the event that has been detected, the function should print the message “Upward movement” or “Downward movement” on the lab monitor, along with the timestamp or the index of the measurement at which the event was detected. Test your code to verify that the printed messages accurately reflect the transitions displayed in the plot produced in Step 3 of Phase 1.
+
+2️⃣ When you are satisfied that your C/C++ code reliably identifies upward and downward motion in acceleration data stored in a file, shift your focus to writing C/C++ code that will enable the micro:bit to detect upward and downward motion in real time. Integrate the function that you developed in the previous step into main.cpp. Instead of printing messages on an external monitor, the function should display an up arrow (↑) or a down arrow (↓) on the 5×5 LED screen of the micro:bit when upward or downward movement is detected. If neither upward nor downward movement is detected, the LED screen should be cleared. Compile your source code, transfer MICROBIT.hex to your micro:bit device and test it.
+
+📣 Sensitivity to micro-movements: Your code should be detecting even subtle motions, which could be causing the direction of the arrow on the LED display to constantly change. To see this in action, watch this short video. When counting jumps, micro-movements should be treated as ‘noise’ and ignored. This is the objective of the next development phase.
+
+💡Links to relevant SCC.131 material:
+
+Displaying images and controlling the 5×5 LED screen of the micro:bit: Lecture notes on Using the Display | API
+
+Online download tool for HEX files if dragging and dropping MICROBIT.hex on to the MICROBIT drive does not work: micro:bit hex download tool
+
+** Phase 3: Refinement and Calibration
+The next two phases are more challenging and more creative, but call for greater initiative and independent decision‑making on your part.
+
+As in Phase 2, you are encouraged to refine the code you developed in standard C/C++ using the accelerometer data in the CSV file as input. When you are satisfied that you code can accurately estimate the number of jumps in the CSV file, transfer the relevant functions to main.cpp, upload the updated MICROBIT.hex to your micro:bit device and test your code in practice. Calibrate the logic in your counting method to minimise or eliminate overcounting or undercounting of jumps. Aim for a relative error of 25% or smaller, i.e., if you jump 40 times, the reported jump count should be between 30 and 50.
+
+The task of Phase 3 can be divided into three steps:
+
+1️⃣ Filter out micro-movements: Instead of handling ‘raw’ accelerometer data, consider passing the data through a Simple Moving Average (SMA) filter, which is commonly used to smooth out short-term fluctuations (noise) and identify trends in a time series, i.e., a sequence of data points plotted over time. The SMA filter uses a sliding window of size N, which moves over the accelerometer data. For every time step j, the SMA filter calculates the mean of the last N* accelerometer values, i.e., from j-N+1 to j, and assigns the mean to a new data point at position j. For example, for a sliding window of size N=3, the value of the data point at time step j=10 will be the average of the mean-centred accelerometer readings at time steps 8, 9 and 10.
+
+Use knowledge gained in SCC.121-Fundamentals of Computer Science to represent a sliding window of size N as an integer array of N elements, where a new element pushes the oldest element out in accordance with the First‑In First‑Out (FIFO) principle.
+
+Develop a function in ARM Assembly (inline or external) that returns the average of the N values in the sliding window. For testing purposes, this function could be initially written in C/C++ and then converted into ARM Assembly.
+
+2️⃣ Focus only on major changes in acceleration: A jump triggers a pattern of alternating small and large fluctuations in acceleration. We use the term transition magnitude to describe the absolute difference between two consecutive local extrema of opposite type, e.g., a local minimum and a local maxmimum, separated by a zero crossing. Major transitions are characterised by a large magnitude, whereas minor transitions are characterised by a small magnitude. Revisit the analysis of your personal jump profile (obtained in Step 3 of Phase 1) to determine a threshold θ above which a transition is classified as major; transitions falling below this threshold are minor and will be ignored.
+
+3️⃣ Translate patterns of major acceleration changes into jumps: Based on your personal jump profile, decide on the values of N (size of sliding window) and θ (threshold for the magnitude magnitude) and define each type of jump as a sequence of major upward and/or downward transitions. You may not need to consider both upward and downward trasitions but you may have to take into accout the time interval between transitions. For example, the first three jumps in Fig. 3.3 are all characterised by two major downward transitions followed by a short period of inactivity. Display the number of jumps on the LED screen of the micro:bit and introduce additional features that give users the option to pause, restart and reset the counter, enable/disable data logging and clear the log file. For an example of the jump counter in operation, watch this short video.
+
+** Phase 4: User Experience
+Hardware and low‑level software in smart devices are essential but tend to feel more abstract or inaccessible to the average user. For this reason, users often take them for granted and gravitate toward front‑end software because this is the part of the echnology they can see and interact with. Front-end software shapes user experience.
+
+Your task for Phase 4 is to develop a software app for the lab computers that improves the jump counter’s user experience. You can use C, C++ or Java for code development. Don’t forget to choose a cool name for your app.
+
+The minimum requirement for the app is to read the downloaded CSV file and output in text form at least two useful metrics in addition to the estimated total number of jumps. For example, the app could report peak-exertion intervals and the highest number of consecutive jumps.
+
+Students who wish to push their limits could develop an app that reads the accelerometer data directly from the log file MY_DATA.HTM, plots activity information in a graphical interface and reports at least three useful metrics in addition to the estimated total number of jumps.
+
+** Marking Scheme
+Marks will be awarded according to the marking scheme shown at the start of this document. Marks for the ‘Functionality’ section will be awarded based on individual merit, but the following table gives an indicative overview of the level of functionality expected for each grade band:
+
+
+
+A	All objectives for grade B have been met and a working program in C/C++ or Java that meets the following specifications has been demonstated on a lab machine:
+Accelerometer data are directly read from the log file MY_DATA.HTM..
+In addition to the estimated total number of jumps, two or more useful metrics are calculated and displayed on a lab monitor.
+Accelerometer data and metrics are visualized in a graphical user interface.
+B	All objectives for grade C have been met, plus:
+Code in C/C++ that implements a Simple Moving Average (SMA) filter and calls an averaging function that has been written in ARM Assembly (Step 1 of Phase 3).
+Working C/C++ program that runs on a micro:bit device, employs both an SMA filter and thresholding to count jumps in real time, and achieves a relative error that is higher than 10% but lower than or equal to 25% (Step 2 and first part of Step 3 of Phase 3).
+Additional features that enable the micro:bit to control the jump counter and record data to MY_DATA.HTM (Last part of Step 3 of Phase 3).
+C	All objectives for grade D have been met, plus:
+Working C/C++ program that runs on a lab computer, reads CSV files that contain accelerometer readings, and idenities upward and downward motion in accelerometer data (Step 1 of Phase 2).
+Working C/C++ program that runs on a micro:bit device, detects upward and downward motion in real time, and displays an up arrow or a down arrow, respectively (Step 2 of Phase 2).
+D	The following objectives have been met:
+Working C/C++ program for the micro:bit that collects accelerometer readings and stores them in the default log file MY_DATA.HTM has been developed and demonstrated (Steps 1, 2 of Phase 1).
+Accelerometer readings for a jumping routine have been exported in a CSV file and analysed in a spreadsheet application, and key characteristics of different types of jumps have been determined (Step 3 of Phase 1).
+F	No working code was demonstrated, or the code did not meet any of the above project objectives.
+
+
+Star Award
+Students who meet all project objectives for an A will receive a Star Award for ‘Functionality’ (i.e., full marks). A Star Award (i.e., bonus marks) is also available for students who do not meet all project objectives but their jump counter achieves a relative error of 10% or lower.
