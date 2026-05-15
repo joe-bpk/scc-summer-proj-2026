@@ -1,16 +1,10 @@
 #include "MicroBit.h"
+#include "acc.h"
 
-MicroBit uBit;
+MicroBit device;
 
 int main()
 {
-    uBit.init();
-    while(1)
-    {
-        uBit.serial.printf("Acc [X:%d][Y:%d][Z:%d]\r\n",
-            uBit.accelerometer.getX(),
-            uBit.accelerometer.getY(),
-            uBit.accelerometer.getZ());
-        uBit.sleep(1000);
-    }
+    device.init();
+    acc_test(device);
 }

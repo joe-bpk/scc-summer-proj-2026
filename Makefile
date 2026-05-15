@@ -12,6 +12,5 @@ flash: build
 monitor: flash
 	cat /dev/ttyACM0
 
-
 clean:
 	rm -rf build/

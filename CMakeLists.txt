@@ -30,6 +30,8 @@ if (NOT "${BUILD_TOOL}" STRGREATER "")
     set(BUILD_TOOL "CODAL")
 endif()
 
+# Add compile commands for my emacs lsp bs
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 #
 # Supress unecessary (and often inaccurate) validity check of the toolchain
 #
@@ -269,5 +271,3 @@ set(CMAKE_EXE_EXPORTS_C_FLAG "")
 set(CMAKE_EXE_EXPORTS_CXX_FLAG "")
 
 
-# Add compile commands for my emacs lsp bs
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)

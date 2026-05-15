@@ -100,7 +100,7 @@ To illustrate how the accelerometer class can be used in practice, let us walk t
 
  uBit.messageBus.listen(MICROBIT_ID_ACCELEROMETER,
  MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE, onAccelerometerData);
-The event handler onAccelerometerData() collects accelerometer readings in all three dimensions using the methods uBit.accelerometer.getX(), uBit.accelerometer.getY() and uBit.accelerometer.getZ(), and saves them in the default log file MY_DATA.HTM. The source file main.cpp is compiled and the executable file MICROBIT.hex is transferred to a micro:bit device, which is held by a user as shown in Fig. 3.1, i.e., the circuit board is positioned vertically - relative to the floor - with its long edge facing the floor and the 5×5 LED display facing the body of the user.
+The event handler on AccelerometerData() collects accelerometer readings in all three dimensions using the methods uBit.accelerometer.getX(), uBit.accelerometer.getY() and uBit.accelerometer.getZ(), and saves them in the default log file MY_DATA.HTM. The source file main.cpp is compiled and the executable file MICROBIT.hex is transferred to a micro:bit device, which is held by a user as shown in Fig. 3.1, i.e., the circuit board is positioned vertically - relative to the floor - with its long edge facing the floor and the 5×5 LED display facing the body of the user.
 
 Fig. 3.1: Adjusting micro:bit’s orientation to maximise changes in acceleration along the Y‑axis.
 Fig. 3.1: Adjusting micro:bit’s orientation to maximise changes in acceleration along the Y‑axis.
