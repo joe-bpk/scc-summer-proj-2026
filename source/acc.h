@@ -12,4 +12,7 @@ void onAccelerometerData(MicroBitEvent e);
 
 void setup_logging_events();
 
-#endif // ACC_H
+
+#endif  // ACC_H
+
+

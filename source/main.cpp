@@ -10,6 +10,8 @@ int main()
     setup_logging_events();
 
     while (1) {
-        device.sleep(1000);
+        /// wake up accelerometer this fixed the bug where no data is recorded
+        device.accelerometer.getX();
+        device.sleep(100);
     }
 }

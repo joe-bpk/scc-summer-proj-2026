@@ -37,14 +37,19 @@ void onAccelerometerData(MicroBitEvent e)
         int y = device.accelerometer.getY();
         int z = device.accelerometer.getZ();
 
+        device.log.beginRow();
         device.log.logData("X", ManagedString(x));
         device.log.logData("Y", ManagedString(y));
         device.log.logData("Z", ManagedString(z));
+        device.log.endRow();
     }
 }
 
 void setup_logging_events()
 {
+    /// wake up accelerometer this fixed the bug where no data is recorded
+    device.accelerometer.getX();
+
     // register all event listeners
     device.messageBus.listen(MICROBIT_ID_BUTTON_A,
                              MICROBIT_BUTTON_EVT_CLICK,
