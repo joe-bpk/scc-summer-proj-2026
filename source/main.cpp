@@ -6,5 +6,10 @@ MicroBit device;
 int main()
 {
     device.init();
-    acc_test(device);
+
+    setup_logging_events();
+
+    while (1) {
+        device.sleep(1000);
+    }
 }

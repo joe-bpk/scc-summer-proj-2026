@@ -1,10 +1,15 @@
-#ifndef ACC_H_
-#define ACC_H_
+#ifndef ACC_H
+#define ACC_H
 
 #include "MicroBit.h"
 
-/// Measures x, y and z acceleration using the MicroBit's accelerometer
-/// prints values via usb
-void acc_test(MicroBit& uBit);
+/// exposed global device instance so event handlers can access it
+extern MicroBit device;
 
-#endif  // ACC_H_
+void onButtonA(MicroBitEvent e);
+void onButtonB(MicroBitEvent e);
+void onAccelerometerData(MicroBitEvent e);
+
+void setup_logging_events();
+
+#endif // ACC_H
