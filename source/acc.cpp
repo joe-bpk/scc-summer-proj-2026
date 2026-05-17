@@ -1,5 +1,7 @@
 #include "acc.h"
 
+#include <chrono>
+
 /// state variable to track recording state
 /// (static restricts it to this file)
 static int recordingEnabled = 0;
@@ -36,8 +38,8 @@ void onAccelerometerData(MicroBitEvent e)
         int x = device.accelerometer.getX();
         int y = device.accelerometer.getY();
         int z = device.accelerometer.getZ();
-
         device.log.beginRow();
+        device.log.setTimeStamp(TimeStampFormat::Milliseconds);
         device.log.logData("X", ManagedString(x));
         device.log.logData("Y", ManagedString(y));
         device.log.logData("Z", ManagedString(z));
